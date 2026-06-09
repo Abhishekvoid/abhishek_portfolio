@@ -69,7 +69,7 @@ export default function ProfileCard() {
             </div>
             <div className="flex items-center gap-2">
               <span className="text-white font-medium">IST</span>
-              <span className="text-zinc-600">//</span>
+              <span className="text-zinc-600"></span>
               <span className="text-zinc-500 text-xs">UTC +5:30</span>
             </div>
           </div>
