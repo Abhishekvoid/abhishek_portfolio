@@ -1,4 +1,4 @@
-import React from "react";
+
 import ProfileCard from "@/components/ui/profile-card";
 import { Experience01 } from "@/components/ui/experience-01";
 import { Projects } from "@/components/ui/projects";

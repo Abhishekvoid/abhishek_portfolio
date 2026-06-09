@@ -1,6 +1,6 @@
 "use client"
 
-import React, { forwardRef, useImperativeHandle, useState } from "react"
+import { forwardRef, useImperativeHandle, useState } from "react"
 import { ChevronDown } from "lucide-react"
 
 export type ChevronsUpDownIconHandle = {
