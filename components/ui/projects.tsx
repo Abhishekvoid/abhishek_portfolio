@@ -22,7 +22,7 @@ export function Projects() {
   return (
     <div className="w-full bg-black border border-[#141414] font-mono antialiased">
       
-      {/* 1. Header block layer with precise geometric counter metrics */}
+    
       <div className="border-b border-[#141414] p-4 bg-[#050505]">
         <h2 className="text-xs font-semibold tracking-widest text-zinc-400 uppercase flex items-center gap-2">
           <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full" />
@@ -30,7 +30,7 @@ export function Projects() {
         </h2>
       </div>
 
-      {/* 2. Core Project List Feed Stack */}
+   
       <div className="p-6 space-y-6 bg-black text-[#ededed]">
         {PROJECT_DATA.map((project) => (
           <ProjectRowItem key={project.id} project={project} />
@@ -57,15 +57,13 @@ function ProjectRowItem({ project }: { project: ProjectItemProps }) {
     >
       <div className="relative group/project">
         
-        {/* Header Block Trigger containing title, duration, and action hotkeys */}
+       
         <CollapsibleTrigger className="block w-full text-left select-none outline-none relative pl-8 before:absolute before:-top-1 before:-right-1 before:-bottom-1.5 before:left-6 before:rounded-md transition-colors hover:before:bg-[#09090b]">
-          
-          {/* Micro Geometric Project Bullet Shell */}
+
           <div className="absolute left-0 top-[4px] z-20 flex size-[22px] items-center justify-center rounded border border-[#222] bg-[#0c0c0d] text-zinc-500 transition-colors group-hover/project:text-zinc-300 group-hover/project:border-zinc-700">
             <BrainCircuitIcon className="size-2.5" strokeWidth={1.5} />
           </div>
 
-          {/* Title Metrics Layout Grid Row */}
           <div className="relative z-10 flex items-start justify-between gap-4 pt-0.5">
             <div className="space-y-0.5">
               <h4 className="text-[13px] font-semibold tracking-tight text-zinc-200 group-hover/project:text-white transition-colors">
@@ -78,7 +76,6 @@ function ProjectRowItem({ project }: { project: ProjectItemProps }) {
               </p>
             </div>
 
-            {/* Action Indicators Anchor Group Panel */}
             <div className="flex items-center gap-3 text-zinc-500 pt-1 relative z-30">
               {project.githubUrl && (
                 <a 
@@ -86,7 +83,7 @@ function ProjectRowItem({ project }: { project: ProjectItemProps }) {
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-white transition-colors"
-                  onClick={(e) => e.stopPropagation()} // Stop propagation to avoid breaking card toggle actions
+                  onClick={(e) => e.stopPropagation()} 
                 >
                   <Link2Icon className="size-3.5" strokeWidth={1.5} />
                 </a>
@@ -99,14 +96,13 @@ function ProjectRowItem({ project }: { project: ProjectItemProps }) {
 
         </CollapsibleTrigger>
 
-        {/* Collapsible Content Grid Field Layer */}
+      
         <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
           <div className="text-[12px] leading-relaxed text-zinc-400 space-y-3 font-mono tracking-tight max-w-none pt-4 pl-8 pr-4 [&_p]:text-zinc-400 [&_strong]:text-white [&_a]:text-white [&_a]:underline">
             <ReactMarkdown>{project.description}</ReactMarkdown>
           </div>
         </CollapsibleContent>
 
-        {/* Technical Specification Badges Capsule Container */}
         <ul className="flex flex-wrap gap-1.5 pt-4 pl-8 relative z-20">
           {project.skills.map((skill, i) => (
             <li 
@@ -123,7 +119,6 @@ function ProjectRowItem({ project }: { project: ProjectItemProps }) {
   )
 }
 
-// Data extracted explicitly from your verified profile markdown layers
 const PROJECT_DATA: ProjectItemProps[] = [
   {
     id: "genai-rag-assistant",

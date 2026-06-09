@@ -59,8 +59,7 @@ export function WorkExperience({ className, experiences }: { className?: string;
               </h3>
             </div>
 
-            {/* Positions Timeline Container */}
-            {/* relative pl-[11px] keeps the vertical track aligned perfectly with the company icon center */}
+           
             <div className="relative pl-[11px] space-y-6 before:absolute before:left-3 before:top-2 before:bottom-2 before:w-px before:bg-[#1c1c1e]">
               {exp.positions.map((pos, idx) => {
                 const isLast = idx === exp.positions.length - 1;
@@ -101,7 +100,6 @@ function ExperiencePositionItem({
     <Collapsible defaultOpen={position.isExpanded} onOpenChange={handleOpenChange} disabled={!position.description} asChild>
       <div className="relative group/trigger">
         
-        {/* The Curved Tail Graphic at the very end of a nested block */}
         {isLastInCompany && (
           <div className="absolute left-[-11px] top-0 bottom-2 w-px bg-black z-10">
             <div className="absolute top-0 left-0 h-3 w-[12px] border-l border-b border-[#1c1c1e] rounded-bl-md" />
@@ -110,7 +108,7 @@ function ExperiencePositionItem({
 
         <CollapsibleTrigger className="block w-full text-left select-none outline-none relative pl-7 before:absolute before:-top-1 before:-right-1 before:-bottom-1.5 before:left-5 before:rounded-md transition-colors hover:before:bg-[#09090b] data-disabled:before:content-none">
           
-          {/* Position Meta Details Icon Node */}
+        
           <div className="absolute left-0 top-[2px] z-20 flex size-[22px] items-center justify-center rounded border border-[#222] bg-[#0c0c0d] text-zinc-500 transition-colors group-hover/trigger:text-zinc-300 group-hover/trigger:border-zinc-700">
             {position.icon ?? <BriefcaseBusinessIcon className="size-2.5" strokeWidth={1.5} />}
           </div>
@@ -124,7 +122,6 @@ function ExperiencePositionItem({
             </div>
           </div>
 
-          {/* Context Track Metadata */}
           <dl className="relative z-10 flex items-center gap-2 pl-0 text-[11px] text-zinc-500 tracking-tight">
             {position.employmentType && (
               <>
@@ -146,7 +143,6 @@ function ExperiencePositionItem({
           </dl>
         </CollapsibleTrigger>
 
-        {/* Content Expansion Block */}
         <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
           {position.description && (
             <div className="text-[12px] leading-relaxed text-zinc-400 space-y-1 font-mono tracking-tight max-w-none pt-3 pl-7 pr-4 [&_p]:text-zinc-400 [&_strong]:text-white [&_a]:text-white [&_a]:underline">
@@ -155,7 +151,6 @@ function ExperiencePositionItem({
           )}
         </CollapsibleContent>
 
-        {/* Skills Tag Pills */}
         {Array.isArray(position.skills) && position.skills.length > 0 && (
           <ul className="flex flex-wrap gap-1.5 pt-3 pl-7">
             {position.skills.map((skill, i) => (

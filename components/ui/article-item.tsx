@@ -10,7 +10,7 @@ type ArticleItemProps = {
 export function ArticleItem({ title, coverUrl, createdAt }: ArticleItemProps) {
   return (
     <a href="#" className="block space-y-3 outline-none group/card">
-      {/* Sharp Border Frame Image Cover Container */}
+
       <div className="w-full aspect-[16/10] bg-[#121212] border border-[#1c1c1c] overflow-hidden grayscale group-hover/card:grayscale-0 transition-all duration-300">
         <img 
           src={coverUrl} 
@@ -19,7 +19,6 @@ export function ArticleItem({ title, coverUrl, createdAt }: ArticleItemProps) {
         />
       </div>
       
-      {/* Metadata Readouts */}
       <div className="space-y-1">
         <p className="text-[10px] text-zinc-500 font-mono tracking-tight tabular-nums">
           {createdAt.replace(/-/g, ".")}
