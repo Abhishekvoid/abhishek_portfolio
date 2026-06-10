@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import {
@@ -10,6 +11,7 @@ import {
   Clock,
   Mail,
   User2,
+  FileText,
 } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -23,6 +25,7 @@ type SocialLinkProps = {
   label: string;
   icon: ReactNode;
 };
+
 const roles = [
   "Backend & Systems Engineer",
   "Robotics & AI Infrastructure",
@@ -63,41 +66,41 @@ function RotatingRole() {
 
 export default function ProfileCard() {
   return (
-    <div className="w-full bg-[#0a0a0a] text-[#ededed] font-mono antialiased border border-[#1f1f1f]">
+    <div className="w-full bg-[#0a0a0a] text-[#ededed] font-mono antialiased border border-[#141414]">
       {/* ── ROW 1: HEADER ── */}
-      <div className="flex border-b border-[#1f1f1f] min-h-[160px]">
+      <div className="flex border-b border-[#141414] min-h-[160px]">
         {/* Avatar Cell */}
-        <div className="w-[160px] h-[160px] flex items-center justify-center border-r border-[#1f1f1f]">
-          <div className="relative w-[160px] h-[160px] overflow-hidden rounded-full border border-[#2a2a2e] bg-[#141414]">
+        <div className="w-[160px] h-[160px] flex items-center justify-center border-r border-[#141414] shrink-0 bg-black">
+          <div className="relative w-[160px] h-[160px] overflow-hidden rounded-full border border-[#1c1c1e] bg-[#141414]">
             <img
-              src="/avatar.jpg"
+            // 
+              src="/img/portfolio_pfp.png" 
               alt="Abhishek Rajput"
-              className="w-full h-full object-cover"
+              className="w-max h-max object-cover"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
               }}
             />
-
-            <div className="absolute inset-0 flex items-center justify-center text-[13px] font-bold text-zinc-500">
+            <div className="absolute inset-0 flex items-center justify-center text-[13px] font-bold text-zinc-500 z-0">
               AR
             </div>
           </div>
         </div>
 
         {/* Name Cell */}
-        <div className="flex-1 border-r border-[#1f1f1f] relative">
-          <div className="absolute bottom-0  w-[100%]">
+        <div className="flex-1 border-r border-[#141414] relative bg-black">
+          <div className="absolute bottom-0 w-[100%]">
             <div className="w-full">
-              <div className="flex items-center gap-2 pt-1.5 pb-1.5 border-y border-[#1f1f1f] pl-4">
-                <h1 className="text-3xl font-bold   tracking-tight leading-none text-white whitespace-nowrap">
+              <div className="flex items-center gap-2 pt-1.5 pb-1.5 border-y border-[#141414] pl-4">
+                <h1 className="text-xl sm:text-2xl font-bold tracking-tight leading-none text-white whitespace-nowrap">
                   Abhishek Rajput
                 </h1>
-
-                <span className="w-6 h-6 rounded-full bg-sky-500 flex items-center justify-center text-white text-xs">
-                  ✓
+                <span className="inline-flex size-3.5 items-center justify-center rounded-full bg-blue-500 text-black shadow-[0_0_8px_rgba(59,130,246,0.4)] shrink-0">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="size-2 text-white">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                  </svg>
                 </span>
               </div>
-
               <RotatingRole />
             </div>
           </div>
@@ -105,18 +108,14 @@ export default function ProfileCard() {
       </div>
 
       {/* ── ROW 2: INFO MATRIX ── */}
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.1fr] border-b border-[#1f1f1f]">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.1fr] border-b border-[#141414]">
         {/* Left column */}
-        <div className="flex flex-col p-5 gap-[13px] border-b md:border-b-0 md:border-r border-[#1f1f1f]">
+        <div className="flex flex-col p-5 gap-[13px] border-b md:border-b-0 md:border-r border-[#141414] bg-black">
           <InfoRow icon={<Terminal size={12} strokeWidth={1.5} />}>
-            Backend &amp; Systems Engineer{" "}
+            Backend &amp; Systems Engineer
           </InfoRow>
 
-          <InfoRow icon={<Lightbulb size={12} strokeWidth={1.5} />}>
-            Ex-Software Developer{" "}
-            <span className="text-zinc-600">@Nexus Automech</span>
-          </InfoRow>
-
+          
           <InfoRow icon={<MapPin size={12} strokeWidth={1.5} />}>
             Ahmedabad, Gujarat, India
           </InfoRow>
@@ -138,12 +137,17 @@ export default function ProfileCard() {
         </div>
 
         {/* Right column */}
-        <div className="flex flex-col p-5 gap-[13px] bg-[#0c0c0c]">
-          <InfoRow icon={<Clock size={12} strokeWidth={1.5} />}>
-            <span className="text-white font-medium">IST</span>
-            <span className="text-zinc-700 mx-1.5"></span>
-            <span className="text-zinc-600 text-[11px]">UTC +5:30</span>
-          </InfoRow>
+        <div className="flex flex-col p-5 gap-[13px] bg-[#050505]">
+          <div className="flex items-center gap-[14px] text-[13px] tracking-tight text-zinc-400">
+            <div className="flex items-center justify-center w-6 h-6 rounded bg-[#161616] border border-[#222222] text-zinc-500">
+              <Clock size={13} strokeWidth={1.5} />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-white font-medium">IST</span>
+              <span className="text-zinc-700"></span>
+              <span className="text-zinc-500 text-xs">UTC +5:30</span>
+            </div>
+          </div>
 
           <InfoRow icon={<Mail size={12} strokeWidth={1.5} />}>
             <a
@@ -157,12 +161,24 @@ export default function ProfileCard() {
           <InfoRow icon={<User2 size={12} strokeWidth={1.5} />}>
             <span className="text-zinc-400">he/him</span>
           </InfoRow>
+
+          {/* NEW NATIVE RESUME ROUTER ENTRY */}
+          <InfoRow icon={<FileText size={12} strokeWidth={1.5} />}>
+            <a
+              href="/pdf/Abhishek_rajput_resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="text-zinc-400 hover:text-white transition-colors font-semibold underline decoration-zinc-700 underline-offset-2 hover:decoration-white"
+            >
+              View Resume 
+            </a>
+          </InfoRow>
         </div>
       </div>
 
       {/* ── ROW 3: SOCIALS TRAY ── */}
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1.1fr]">
-        <div className="p-4 flex items-center gap-4 md:border-r border-[#1f1f1f]">
+        <div className="p-4 flex items-center gap-4 md:border-r border-[#141414] bg-black">
           <SocialLink
             href="https://github.com/Abhishekvoid"
             label="GitHub"
@@ -174,7 +190,7 @@ export default function ProfileCard() {
             icon={<FaLinkedin size={15} />}
           />
         </div>
-        <div className="hidden md:block bg-[#0c0c0c]" />
+        <div className="hidden md:block bg-[#050505]" />
       </div>
     </div>
   );

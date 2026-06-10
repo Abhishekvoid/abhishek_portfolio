@@ -45,7 +45,7 @@ const EXPERIENCE = [
         isExpanded: true,
 
         description:
-          "**[GitHub](https://github.com/Abhishekvoid/RagBag-frontend) • [System Design](https://excalidraw.com/#json=B4VQe_9qrgFyiu3fgqPBO,ZuKsEZ1gFaE5NmiUF1m1eA) • [Architecture Blog](https://ragsystemabhishekrajput.hashnode.dev/building-a-production-grade-rag-system-architecture-trade-offs-and-lessons-learned)**\n\n" +
+          
           "- **Architected a production-grade RAG platform** enabling conversational interaction with user-uploaded documents through semantic retrieval and source-aware responses.\n" +
           "- **Built an end-to-end retrieval pipeline** spanning OCR extraction, semantic chunking, TEI embeddings, Qdrant vector search, cross-encoder reranking, and Llama 3 generation.\n" +
           "- **Implemented distributed ingestion and retrieval workflows** using Django, Celery, Redis, and WebSockets for asynchronous processing and real-time updates.\n" +

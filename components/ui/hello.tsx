@@ -47,12 +47,7 @@ export function Hello() {
       {/* Main Core Bio Area */}
       <div className="p-6 space-y-5 bg-black">
         <div className="space-y-1">
-          <h1 className="text-xl font-bold tracking-tight text-white">
-            Abhishek Rajput
-          </h1>
-          <p className="text-[13px] text-zinc-400 font-medium uppercase tracking-wider">
-            Backend & Systems Engineer
-          </p>
+          
         </div>
 
         {/* Your Refined Copy Selection */}
