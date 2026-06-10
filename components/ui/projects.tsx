@@ -169,7 +169,7 @@ function ProjectRowItem({ project, isLast }: { project: ProjectItemProps; isLast
                     rel="noreferrer"
                     className="text-zinc-400 hover:text-white transition-colors underline decoration-zinc-700 underline-offset-2"
                   >
-                    Blog Post
+                    Technical Deep Dive
                   </a>
                   {project.designUrl && <span className="text-zinc-700">|</span>}
                 </>
@@ -182,7 +182,7 @@ function ProjectRowItem({ project, isLast }: { project: ProjectItemProps; isLast
                   rel="noreferrer"
                   className="text-zinc-400 hover:text-white transition-colors underline decoration-zinc-700 underline-offset-2"
                 >
-                  System Design Diagram
+                 Architecture
                 </a>
               )}
 
@@ -238,7 +238,7 @@ const PROJECT_DATA: ProjectItemProps[] = [
     title: "RAG Knowledge Assistant",
     period: "09.2024",
     isExpanded: true,
-    githubUrl: "https://github.com/Abhishekvoid",
+    githubUrl: "https://github.com/Abhishekvoid/RagBag-backend",
     videoPath: "/video/RAG _demo.mp4", 
     blogUrl: "https://ragsystemabhishekrajput.hashnode.dev/building-a-production-grade-rag-system-architecture-trade-offs-and-lessons-learned",
     designUrl: "https://excalidraw.com/#json=B4VQe_9qrgFyiu3fgqPBO,ZuKsEZ1gFaE5NmiUF1m1eA",
