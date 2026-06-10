@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import type { ReactNode } from "react";
 import {
   Terminal,
   Lightbulb,
@@ -12,7 +13,16 @@ import {
 } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
+type InfoRowProps = {
+  icon: ReactNode;
+  children: ReactNode;
+};
 
+type SocialLinkProps = {
+  href: string;
+  label: string;
+  icon: ReactNode;
+};
 const roles = [
   "Backend & Systems Engineer",
   "Robotics & AI Infrastructure",
@@ -50,60 +60,49 @@ function RotatingRole() {
     </div>
   );
 }
- 
+
 export default function ProfileCard() {
   return (
     <div className="w-full bg-[#0a0a0a] text-[#ededed] font-mono antialiased border border-[#1f1f1f]">
       {/* ── ROW 1: HEADER ── */}
-     <div className="flex border-b border-[#1f1f1f] min-h-[160px]">
+      <div className="flex border-b border-[#1f1f1f] min-h-[160px]">
+        {/* Avatar Cell */}
+        <div className="w-[160px] h-[160px] flex items-center justify-center border-r border-[#1f1f1f]">
+          <div className="relative w-[160px] h-[160px] overflow-hidden rounded-full border border-[#2a2a2e] bg-[#141414]">
+            <img
+              src="/avatar.jpg"
+              alt="Abhishek Rajput"
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.currentTarget.style.display = "none";
+              }}
+            />
 
-  {/* Avatar Cell */}
-  <div className="w-[160px] h-[160px] flex items-center justify-center border-r border-[#1f1f1f]">
-    <div className="relative w-[160px] h-[160px] overflow-hidden rounded-full border border-[#2a2a2e] bg-[#141414]">
-      <img
-        src="/avatar.jpg"
-        alt="Abhishek Rajput"
-        className="w-full h-full object-cover"
-        onError={(e) => {
-          e.currentTarget.style.display = "none";
-        }}
-      />
-
-      <div className="absolute inset-0 flex items-center justify-center text-[13px] font-bold text-zinc-500">
-        AR
-      </div>
-    </div>
-  </div>
-
-  {/* Name Cell */}
-  <div className="flex-1 border-r border-[#1f1f1f] relative">
-
-    <div className="absolute bottom-0  w-[100%]">
-
-      <div className="w-full">
-
-        <div className="flex items-center gap-2 pt-1.5 pb-1.5 border-y border-[#1f1f1f] pl-4">
-
-          <h1 className="text-3xl font-bold   tracking-tight leading-none text-white whitespace-nowrap">
-            Abhishek Rajput
-          </h1>
-
-          <span className="w-6 h-6 rounded-full bg-sky-500 flex items-center justify-center text-white text-xs">
-            ✓
-          </span>
-
+            <div className="absolute inset-0 flex items-center justify-center text-[13px] font-bold text-zinc-500">
+              AR
+            </div>
+          </div>
         </div>
 
-        <RotatingRole />
+        {/* Name Cell */}
+        <div className="flex-1 border-r border-[#1f1f1f] relative">
+          <div className="absolute bottom-0  w-[100%]">
+            <div className="w-full">
+              <div className="flex items-center gap-2 pt-1.5 pb-1.5 border-y border-[#1f1f1f] pl-4">
+                <h1 className="text-3xl font-bold   tracking-tight leading-none text-white whitespace-nowrap">
+                  Abhishek Rajput
+                </h1>
 
+                <span className="w-6 h-6 rounded-full bg-sky-500 flex items-center justify-center text-white text-xs">
+                  ✓
+                </span>
+              </div>
+
+              <RotatingRole />
+            </div>
+          </div>
+        </div>
       </div>
-
-    </div>
-
-  </div>
-
-
-</div>
 
       {/* ── ROW 2: INFO MATRIX ── */}
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1.1fr] border-b border-[#1f1f1f]">
@@ -111,7 +110,6 @@ export default function ProfileCard() {
         <div className="flex flex-col p-5 gap-[13px] border-b md:border-b-0 md:border-r border-[#1f1f1f]">
           <InfoRow icon={<Terminal size={12} strokeWidth={1.5} />}>
             Backend &amp; Systems Engineer{" "}
-            
           </InfoRow>
 
           <InfoRow icon={<Lightbulb size={12} strokeWidth={1.5} />}>
@@ -182,7 +180,7 @@ export default function ProfileCard() {
   );
 }
 
-function InfoRow({ icon, children }) {
+function InfoRow({ icon, children }: InfoRowProps) {
   return (
     <div className="flex items-center gap-[13px] text-[12.5px] tracking-tight text-zinc-400">
       <div className="flex items-center justify-center w-[22px] h-[22px] rounded-[3px] bg-[#161616] border border-[#252525] text-zinc-500 shrink-0">
@@ -193,7 +191,7 @@ function InfoRow({ icon, children }) {
   );
 }
 
-function SocialLink({ href, label, icon }) {
+function SocialLink({ href, label, icon }: SocialLinkProps) {
   return (
     <a
       href={href}
