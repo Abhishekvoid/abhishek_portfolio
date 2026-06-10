@@ -1,3 +1,4 @@
+"use client";
 import ProfileCard from "@/components/ui/profile-card";
 import { Experience01 } from "@/components/ui/experience-01";
 import { Projects } from "@/components/ui/projects";
@@ -12,14 +13,14 @@ export default function Page() {
 
       {/* FIXED BACKGROUND VERTICAL MATRIX GUIDES */}
       <div className="absolute inset-y-0 left-0 right-0 pointer-events-none z-0">
-        <div className="w-full max-w-5xl mx-auto h-full grid grid-cols-1 md:grid-cols-[1fr_20px] px-4 md:px-8">
+        <div className="w-full max-w-3xl mx-auto h-full grid grid-cols-1 md:grid-cols-[1fr_20px] px-4 md:px-8">
           <div className="h-full border-l border-r border-[#141414]" />
           <div className="h-full border-r border-[#141414] hidden md:block" />
         </div>
       </div>
 
       {/* CORE ACTIVE SCROLL CONTAINER STACK */}
-      <div className="relative z-10 max-w-5xl mx-auto -translate-y-10 px-4 md:px-8 space-y-0">
+      <div className="relative z-10 max-w-3xl mx-auto -translate-y-10 px-4 md:px-8 space-y-0">
         
         {/* PROFILE CARD BLOCK (Anchor target for "Get in Touch") */}
         <div 
