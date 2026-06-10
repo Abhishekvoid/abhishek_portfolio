@@ -74,7 +74,7 @@ export default function ProfileCard() {
           <div className="relative w-[160px] h-[160px] overflow-hidden rounded-full border border-[#1c1c1e] bg-[#141414]">
             <img
             // 
-              src="/img/portfolio_pfp.png" 
+              src="#" 
               alt="Abhishek Rajput"
               className="w-max h-max object-cover"
               onError={(e) => {

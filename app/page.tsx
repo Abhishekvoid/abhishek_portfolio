@@ -4,6 +4,7 @@ import { Experience01 } from "@/components/ui/experience-01";
 import { Projects } from "@/components/ui/projects";
 import { Hello } from "@/components/ui/hello";
 import { Blog } from "@/components/ui/blog";
+import { Footer } from "@/components/ui/footer";
 
 export default function Page() {
   return (
@@ -83,6 +84,19 @@ export default function Page() {
 
         <div className="relative w-full bg-black pt-0 before:absolute before:left-[-100vw] before:top-0 before:w-[300vw] before:border-t before:border-[#141414]">
          <Blog/>
+        </div>
+
+         <div className="relative w-full border-b border-[#141414] before:absolute before:left-[-100vw] before:bottom-0 before:w-[300vw] before:border-b before:border-[#141414]" />
+        <div className="relative w-full bg-black before:absolute before:left-[-100vw] before:top-0 before:w-[300vw] before:border-t before:border-[#141414]" />
+        <div className="relative w-full border-b border-[#141414] before:absolute before:left-[-100vw] before:bottom-0 before:w-[300vw] before:border-b before:border-[#141414] pb-12" />
+
+        {/* INDUSTRIAL DIAGONAL STRIP PANEL CUT 3 */}
+        <div className="relative flex h-10 w-full border-b border-[#141414] before:absolute before:left-[-100vw] before:-z-1 before:h-full before:w-[300vw] before:bg-[repeating-linear-gradient(315deg,#141414_0,#141414_1px,transparent_0,transparent_50%)] before:[background-size:10px_10px] after:absolute after:left-[-100vw] after:bottom-0 after:w-[300vw] after:border-b after:border-[#141414]">
+          <div className="w-full h-full md:border-r border-[#141414]/40 pointer-events-none" />
+        </div>
+
+        <div className="relative w-full bg-black pt-0 before:absolute before:left-[-100vw] before:top-0 before:w-[300vw] before:border-t before:border-[#141414]">
+         <Footer/>
         </div>
 
       </div>

@@ -21,7 +21,7 @@ export function Hello() {
     <div className="w-full bg-black border border-[#141414] font-mono antialiased">
       {/* Micro Terminal Top Bar Header */}
       <div
-  className="
+        className="
     relative bg-[#050505] p-4 flex items-center justify-between
     after:content-['']
     after:absolute after:-bottom-[1px]
@@ -29,26 +29,24 @@ export function Hello() {
     after:h-px after:-translate-x-1/2
     after:bg-[#141414]
   "
->
-  <h2 className="text-xs font-semibold tracking-widest text-zinc-400 uppercase flex items-center gap-2">
-    <TerminalIcon className="size-3.5 text-zinc-500" />
-    ./hello.sh
-  </h2>
+      >
+        <h2 className="text-xs font-semibold tracking-widest text-zinc-400 uppercase flex items-center gap-2">
+          <TerminalIcon className="size-3.5 text-zinc-500" />
+          ./hello.sh
+        </h2>
 
-  <div className="flex items-center gap-1.5 text-[10px] text-zinc-500 tracking-tight">
-    <span className="relative flex h-1.5 w-1.5">
-      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
-      <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
-    </span>
-    <span className="text-zinc-400 font-medium">Active</span>
-  </div>
-</div>
+        <div className="flex items-center gap-1.5 text-[10px] text-zinc-500 tracking-tight">
+          <span className="relative flex h-1.5 w-1.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+          </span>
+          <span className="text-zinc-400 font-medium">Active</span>
+        </div>
+      </div>
 
       {/* Main Core Bio Area */}
       <div className="p-6 space-y-5 bg-black">
-        <div className="space-y-1">
-          
-        </div>
+        <div className="space-y-1"></div>
 
         {/* Your Refined Copy Selection */}
         <div className="space-y-4 text-[12px] leading-relaxed text-zinc-400 max-w-3xl font-mono tracking-tight">
@@ -61,9 +59,9 @@ export function Hello() {
             problems around distributed systems, real-time infrastructure, and
             taking products from R&D to production.
           </p>
-          tsx
+        
           <div className="space-y-2 pt-1">
-            <p className="text-white font-medium">// Recently Shipped:</p>
+            <p className="text-white font-medium">Recently Shipped:</p>
 
             <ul className="list-disc pl-5 space-y-1 text-zinc-300">
               <li>
@@ -135,17 +133,24 @@ export function Hello() {
             </span>
           </div>
 
+          
           <div className="flex items-center gap-2.5">
-            <div className="flex size-5 shrink-0 items-center justify-center rounded-sm bg-[#09090b] border border-[#1c1c1e] text-zinc-500">
-              <ArrowUpRightIcon size={11} />
-            </div>
-            <span className="text-zinc-300">
-              Exploring:{" "}
-              <span className="text-zinc-500">
-                Early-stage opportunities in Robotics + AI
-              </span>
-            </span>
-          </div>
+  <div className="flex size-5 shrink-0 items-center justify-center rounded-sm bg-[#09090b] border border-[#1c1c1e] text-zinc-500">
+    <ArrowUpRightIcon size={11} />
+  </div>
+
+  <span className="text-zinc-300">
+    Open To:{" "}
+    <span className="text-zinc-500">
+      Full-time opportunities in Robotics + AI and system Engineer
+    </span>
+  </span>
+
+  <span className="relative ml-auto flex h-1.5 w-1.5 shrink-0">
+    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+    <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
+  </span>
+</div>
         </div>
       </div>
     </div>
