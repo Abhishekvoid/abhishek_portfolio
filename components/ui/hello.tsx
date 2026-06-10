@@ -25,7 +25,7 @@ export function Hello() {
     relative bg-[#050505] p-4 flex items-center justify-between
     after:content-['']
     after:absolute after:-bottom-[1px]
-    after:left-1/2 after:w-[140%]
+    after:left-1/2 after:w-[180%]
     after:h-px after:-translate-x-1/2
     after:bg-[#141414]
   "

@@ -36,7 +36,7 @@ export function Projects() {
   className="
     relative w-full bg-[#050505] p-4
     after:absolute after:-bottom-[1px]
-    after:left-1/2 after:h-px after:w-[140%]
+    after:left-1/2 after:h-px after:w-[180%]
     after:-translate-x-1/2 after:bg-[#141414]
     after:content-['']
   "
